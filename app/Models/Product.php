@@ -11,4 +11,9 @@ class Product extends Model
         'price',
         'description',
     ];
+
+    public function images()
+    {
+        return $this->belongsToMany('App\Models\Image', 'product_images');
+    }
 }
